@@ -1,0 +1,376 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "winres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEU)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DIALOG_ADD_CONTENTTYPE DIALOGEX 0, 0, 218, 103
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Add new Content-Type"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,161,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,161,24,50,14
+    LTEXT           "Content-Type:",IDC_STATIC,7,7,48,8
+    EDITTEXT        IDC_EDIT_CONTENTTYPE,63,7,90,12,ES_AUTOHSCROLL
+    LTEXT           "You may use '*' as an wildcard. For instance, if you add 'image/*' you can filter all content where the content-type header starts with 'image/', such as 'image/gif' or 'image/jpeg', etc.",IDC_STATIC,7,50,204,45
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_DIALOG_ADD_CONTENTTYPE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 211
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 95
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Neutral resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 189, 95
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION | WS_SYSMENU
+CAPTION "About"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    CTEXT           "ieHTTPHeaders",IDC_IE_LINK,61,11,52,8
+    LTEXT           "www.blunck.se",IDC_BLUNCK_LINK,66,26,57,9
+    LTEXT           "v2.25",IDC_STATIC,115,11,19,8
+    CTEXT           "all rights reserved, no warranties extended",IDC_STATIC,25,50,138,9
+END
+
+IDD_BREAKPOINTS DIALOGEX 0, 0, 322, 227
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Breakpoints"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,205,206,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,265,206,50,14
+    CONTROL         "Break on next transaction",IDC_CHECK_BREAKNEXT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,7,105,16
+END
+
+IDD_BREAKPOINT DIALOGEX 0, 0, 423, 282
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Breakpoint"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,119,261,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,173,261,50,14
+    EDITTEXT        IDC_REQUEST,7,16,409,105,ES_MULTILINE | ES_AUTOHSCROLL | ES_WANTRETURN | WS_VSCROLL
+    PUSHBUTTON      "Breakpoints...",ID_BREAKPOINT_SETTINGS,361,257,55,18
+    EDITTEXT        IDC_RESPONSE,7,137,409,105,ES_MULTILINE | ES_AUTOHSCROLL | ES_WANTRETURN | WS_VSCROLL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_BREAKPOINTS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 315
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 220
+    END
+
+    IDD_BREAKPOINT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 416
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 275
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""winres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "1 TYPELIB ""ieHTTPTrace.tlb""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 2,2,5,0
+ PRODUCTVERSION 2,2,5,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "FileDescription", "ieHTTPTrace Module"
+            VALUE "FileVersion", "2.25"
+            VALUE "InternalName", "ieHTTPTrace"
+            VALUE "LegalCopyright", "Copyright Jonas Blunck 2002-2012"
+            VALUE "OriginalFilename", "ieHTTPTrace.DLL"
+            VALUE "ProductName", "ieHTTPHeaders"
+            VALUE "ProductVersion", "2.25"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_PROJNAME            "ieHTTPTrace"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Swedish resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_SVE)
+#ifdef _WIN32
+LANGUAGE LANG_SWEDISH, SUBLANG_DEFAULT
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_SETTINGS DIALOGEX 0, 0, 301, 194
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_CAPTION | WS_SYSMENU
+CAPTION "Basic"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "Show Request Headers",IDC_CHECK_REQUEST_HEADERS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,13,72,91,10
+    CONTROL         "Show Response Headers",IDC_CHECK_RESPONSE_HEADERS,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,115,72,95,10
+    GROUPBOX        "Capture",IDC_STATIC,7,61,287,41
+    CONTROL         "Show Request Body",IDC_CHECK_REQUEST_BODY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,13,84,80,10
+    GROUPBOX        "Colors",IDC_STATIC,7,6,287,50
+    LTEXT           "Response plaintext:",IDC_STATIC,13,18,65,8
+    LTEXT           "",IDC_INCOMING_PLAINTEXT,79,18,25,12,WS_BORDER
+    LTEXT           "Request plaintext:",IDC_STATIC,13,34,60,8
+    LTEXT           "",IDC_OUTGOING_PLAINTEXT,79,34,25,12,WS_BORDER
+    LTEXT           "Response ciphertext (SSL):",IDC_STATIC,137,18,88,8
+    LTEXT           "",IDC_INCOMING_SSL,226,18,25,12,WS_BORDER
+    LTEXT           "Request ciphertext (SSL):",IDC_STATIC,137,34,84,8
+    LTEXT           "",IDC_OUTGOING_SSL,226,34,25,12,WS_BORDER
+    PUSHBUTTON      "...",IDC_COL_IN_PT,109,18,11,12
+    PUSHBUTTON      "...",IDC_COL_OUT_PT,109,34,11,12
+    PUSHBUTTON      "...",IDC_COL_IN_SSL,256,18,11,12
+    PUSHBUTTON      "...",IDC_COL_OUT_SSL,256,34,11,12
+    CONTROL         "Scroll during Capture",IDC_CHECK_SCROLL,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,14,118,103,15
+    GROUPBOX        "Misc",IDC_STATIC,7,106,287,36
+    CONTROL         "Group Request and Response",IDC_CHECK_GROUP_REQ_RESP,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,115,120,111,10
+    CONTROL         "Show Response Body (text only)",IDC_CHECK_RESPONSE_BODY,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,115,84,121,10
+END
+
+IDD_FILTERSETTINGS DIALOGEX 0, 0, 316, 171
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_CAPTION | WS_SYSMENU
+CAPTION "Content Type filter"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_LIST_FILTER,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,7,245,115
+    PUSHBUTTON      "Add",IDC_BUTTONADD,259,7,49,17
+    PUSHBUTTON      "Remove",IDC_BUTTON_REMOVE,259,27,50,14
+    LTEXT           "The selected content-type(s) will be matched against the Content-Type header in the HTTP response. If they match, and the content-type is selected for filtering, no output for that transaction will be shown in the output window. ",IDC_STATIC,7,130,302,34
+END
+
+IDD_FILTERHTTPCODES DIALOGEX 0, 0, 348, 208
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_DISABLED | WS_CAPTION | WS_SYSMENU
+CAPTION "Status Code Filter"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_LIST_FILTER_CODES,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,7,334,148
+    LTEXT           "If the HTTP status code in any HTTP response matches any code you've selected for filtering, the entire transaction will be filtered. This works best if you've enabled the feature that groups requests and responses (available in the settings menu).",IDC_STATIC,7,167,334,34
+END
+
+IDD_TABBEDSETTINGS DIALOGEX 0, 0, 394, 229
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_TAB,"SysTabControl32",0x0,7,7,380,215
+END
+
+IDD_SAVESETTINGS DIALOGEX 0, 0, 301, 157
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_ACCEPTFILES
+CAPTION "Save"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "Save to file",IDC_CHECK_SAVE_TO_FILE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,13,18,52,10
+    GROUPBOX        "Options",IDC_STATIC,7,6,287,36
+    PUSHBUTTON      "...",IDC_CHOOSE_SAVE_FILENAME,279,67,11,12
+    GROUPBOX        "Filename",IDC_STATIC,7,54,287,36
+    EDITTEXT        IDC_EDIT_FILENAME,14,66,260,13,ES_AUTOHSCROLL
+    LTEXT           "If you enable 'Save to file', the headers will be saved to the selected file as they are sent and received. Please note that this file will continue to grow until you manually delete it or disable this feature.",IDC_STATIC,7,98,272,37
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_SETTINGS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 294
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 187
+    END
+
+    IDD_FILTERSETTINGS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 309
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 164
+    END
+
+    IDD_FILTERHTTPCODES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 341
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 201
+    END
+
+    IDD_TABBEDSETTINGS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 387
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 222
+    END
+
+    IDD_SAVESETTINGS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 294
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 150
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// REGISTRY
+//
+
+IDR_HTTPTRACE           REGISTRY                "HTTPTrace.rgs"
+#endif    // Swedish resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+1 TYPELIB "ieHTTPTrace.tlb"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

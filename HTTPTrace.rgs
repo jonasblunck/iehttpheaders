@@ -1,0 +1,108 @@
+HKCR
+{
+	IeHTTPTrace.HTTPTrace.1 = s 'HTTPTrace Class'
+	{
+		CLSID = s '{ED2DD609-156E-44EE-B2EC-B93544F5A0D6}'
+	}
+	IeHTTPTrace.HTTPTrace = s 'HTTPTrace Class'
+	{
+		CLSID = s '{ED2DD609-156E-44EE-B2EC-B93544F5A0D6}'
+		CurVer = s 'IeHTTPTrace.HTTPTrace.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {ED2DD609-156E-44EE-B2EC-B93544F5A0D6} = s 'ieHTTPHeaders'
+		{
+			ProgID = s 'IeHTTPTrace.HTTPTrace.1'
+			VersionIndependentProgID = s 'IeHTTPTrace.HTTPTrace'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Both'
+			}
+
+			'TypeLib' = s '{2A682F56-94D4-4819-8957-590C212A7195}'
+			
+			ForceRemove 'Implemented Categories'
+			{
+			  ForceRemove {00021494-0000-0000-C000-000000000046}
+			  {
+			  }
+			}
+		}
+	}
+}
+
+HKLM
+{
+  NoRemove Software
+  {
+    NoRemove Microsoft
+    { 
+      NoRemove 'Internet Explorer'
+      {
+         NoRemove 'Extensions'
+         {
+           ForceRemove {EF3CEDAA-71DE-494f-A700-9648BD0F0BA9} = s 'ieHTTPHeaders'
+           {
+             val CLSID = s '{1FBA04EE-3024-11d2-8F1F-0000F87ABD16}'
+             val MenuText = s 'Display ieHTTPHeaders...'
+             val ClsidExtension = s '{ED2DD609-156E-44EE-B2EC-B93544F5A0D6}'
+           }
+         }
+      }
+    
+    }
+  }
+
+}
+
+HKCU
+{
+  NoRemove Software
+  {
+     NoRemove Microsoft
+     {
+         NoRemove 'Internet Explorer'
+         {
+           NoRemove 'Explorer Bars'
+           {
+             ForceRemove {ED2DD609-156E-44EE-B2EC-B93544F5A0D6} = s 'ieHTTPHeaders'
+             {
+               val BarSize = b '8001000000000000' 
+             }
+           }
+
+         }
+     }
+     
+     NoRemove BlunckSoftware
+     {
+       ForceRemove ieHTTPHeaders
+       {
+         ForceRemove Settings
+         {
+           val ColorIncomingPT  = d 15084564
+           val ColorOutgoingPT  = d 1315860
+           val ColorIncomingSSL = d 15084564
+           val ColorOutgoingSSL = d 1315860
+         
+           val ShowRequestHeader =  d 1
+           val ShowRequestBody =  d 1
+           val ShowResponseHeader = d 1
+           val ShowResponseBody = d 0
+           val ScrollDuringCapture = d 1
+           val GroupRequestResponse = d 1
+           val SaveToFile = d 0
+           val SaveFilename = s ''
+           
+           val EnableVerboseLog = d 0
+           val VerboseLogFile = s ''
+           val ContentTypes = s '"text/html*" "text/javascript" "image/*" "text/css*" "text/xml*" "text/*" "application/*"'
+         }
+       }
+     
+     }
+  }
+}
+

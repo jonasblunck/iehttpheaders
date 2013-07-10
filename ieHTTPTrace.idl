@@ -1,0 +1,28 @@
+// ieHTTPTrace.idl : IDL source for ieHTTPTrace.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (ieHTTPTrace.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	uuid(2A682F56-94D4-4819-8957-590C212A7195),
+	version(1.0),
+	helpstring("ieHTTPTrace 1.0 Type Library")
+]
+library IEHTTPTRACELib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(ED2DD609-156E-44EE-B2EC-B93544F5A0D6),
+		helpstring("HTTPTrace Class")
+	]
+	coclass HTTPTrace
+	{
+		[default] interface IUnknown;
+	};
+};

@@ -1,0 +1,15 @@
+ieHTTPHeaders version 2.25
+
+License
+********
+As of version 2.25, ieHTTPHeaders is freeware. There is no fee for using this software.
+
+
+Disclamer
+***********
+ieHTTPHeaders, AND ANY AND ALL ACCOMPANYING SOFTWARE, FILES, DATA AND MATERIALS, ARE DISTRIBUTED AND PROVIDED "AS IS" AND WITH NO WARRANTIES OF ANY KIND, WHETHER EXPRESS OR IMPLIED.
+
+ieHTTPHeaders 
+copyright (c) Jonas Blunck 2002-2013
+all rights reserved
+no warranties extended, use at own risk

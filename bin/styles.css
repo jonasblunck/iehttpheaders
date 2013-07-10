@@ -1,0 +1,45 @@
+body {
+	font-family: lucida sans unicode, verdana, arial, helvetica;
+	font-size: 80%;
+	background-color: white;
+}
+
+table {
+	margin: 20px;
+	font-size: 100%;
+}
+
+.body {
+	margin: 40px;
+	padding: 40px;
+        padding-left: 100px;
+        margin-right: 120px;
+}
+.figure {
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.footer {
+	text-align: center;
+	padding-top: 10px;
+	font-weight: bold;
+}
+dt {
+	padding-top: 5px;
+	font-weight: bold;
+}
+dd {
+	padding-top: 5px;
+}
+pre {
+	border: 1px solid black;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding: 16px;
+	background-color: #FFEEDD;
+}	
+h3 {
+	line-height: 2px;
+	vertical-align: top;
+}

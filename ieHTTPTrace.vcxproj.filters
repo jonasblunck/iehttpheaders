@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="AboutDlg.cpp" />
+    <ClCompile Include="AddContentTypeDlg.cpp" />
+    <ClCompile Include="BreakPointDlg.cpp" />
+    <ClCompile Include="BreakPointsDlg.cpp" />
+    <ClCompile Include="CEditCtrl.cpp" />
+    <ClCompile Include="CHttpHeaders.cpp" />
+    <ClCompile Include="CHTTPTraceRichEdit.cpp" />
+    <ClCompile Include="ContentFilterDlg.cpp" />
+    <ClCompile Include="HttpRequestInfo.cpp" />
+    <ClCompile Include="HTTPStatusCodeFilterDlg.cpp" />
+    <ClCompile Include="HTTPTrace.cpp" />
+    <ClCompile Include="ieHook.cpp" />
+    <ClCompile Include="ieHTTPTrace.cpp" />
+    <ClCompile Include="Orchestrator.cpp" />
+    <ClCompile Include="ResourceView.cpp" />
+    <ClCompile Include="SaveDlg.cpp" />
+    <ClCompile Include="SettingsDlg.cpp" />
+    <ClCompile Include="SettingsStorage.cpp" />
+    <ClCompile Include="StdAfx.cpp" />
+    <ClCompile Include="chainhook\CAssmCopier.cpp">
+      <Filter>chainhook</Filter>
+    </ClCompile>
+    <ClCompile Include="chainhook\CDisAssm.cpp">
+      <Filter>chainhook</Filter>
+    </ClCompile>
+    <ClCompile Include="chainhook\ChainHookAPI.cpp">
+      <Filter>chainhook</Filter>
+    </ClCompile>
+    <ClCompile Include="chainhook\Injector.cpp">
+      <Filter>chainhook</Filter>
+    </ClCompile>
+    <ClCompile Include="chainhook\CChainHook.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AboutDlg.h" />
+    <ClInclude Include="AddContentTypeDlg.h" />
+    <ClInclude Include="AutoMutex.h" />
+    <ClInclude Include="BreakPointDlg.h" />
+    <ClInclude Include="BreakPointsDlg.h" />
+    <ClInclude Include="CBackCol.h" />
+    <ClInclude Include="CEditCtrl.h" />
+    <ClInclude Include="CHttpHeaders.h" />
+    <ClInclude Include="CHTTPTraceRichEdit.h" />
+    <ClInclude Include="ContentFilterDlg.h" />
+    <ClInclude Include="HttpRequestInfo.h" />
+    <ClInclude Include="HTTPStatusCodeFilterDlg.h" />
+    <ClInclude Include="HTTPTrace.h" />
+    <ClInclude Include="ieHook.h" />
+    <ClInclude Include="ITransactionProcessor.h" />
+    <ClInclude Include="Orchestrator.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="ResourceView.h" />
+    <ClInclude Include="SaveDlg.h" />
+    <ClInclude Include="SaveProcessor.h" />
+    <ClInclude Include="SettingsDlg.h" />
+    <ClInclude Include="SettingsStorage.h" />
+    <ClInclude Include="StdAfx.h" />
+    <ClInclude Include="TabbedSettings.h" />
+    <ClInclude Include="ThreadWorker.h" />
+    <ClInclude Include="chainhook\CAssmCopier.h">
+      <Filter>chainhook</Filter>
+    </ClInclude>
+    <ClInclude Include="chainhook\CChainHook.h">
+      <Filter>chainhook</Filter>
+    </ClInclude>
+    <ClInclude Include="chainhook\CDisAssm.h">
+      <Filter>chainhook</Filter>
+    </ClInclude>
+    <ClInclude Include="chainhook\ChainHookAPI.h">
+      <Filter>chainhook</Filter>
+    </ClInclude>
+    <ClInclude Include="chainhook\Injector.h">
+      <Filter>chainhook</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ieHTTPTrace.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Midl Include="ieHTTPTrace.idl" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ieHTTPTrace.def" />
+    <None Include="HTTPTrace.rgs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="chainhook">
+      <UniqueIdentifier>{6cb8bf47-deb6-4cd5-98b0-cafdba27f764}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
