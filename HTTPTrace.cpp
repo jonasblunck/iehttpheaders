@@ -100,9 +100,10 @@ LRESULT CHTTPTrace::OnCreate(LPCREATESTRUCT pcs)
 
   m_tabView.Create(m_hWnd);
   m_ctrlEdit.Create(m_tabView, NULL, NULL, WS_CHILD|EDSTYLE, EDEXSTYLE);
-	m_resourceView.Create(m_tabView, rcDefault, NULL, WS_CHILD|TVS_HASBUTTONS|TVS_HASLINES|TVS_LINESATROOT);
-  
-  if (!m_ctrlEdit.m_hWnd || !m_tabView.m_hWnd || !m_resourceView.m_hWnd) 
+  m_resourceView.Create(m_tabView, rcDefault, NULL, WS_CHILD|TVS_HASBUTTONS|TVS_HASLINES|TVS_LINESATROOT);
+  m_statsView.Create(m_tabView, rcDefault, NULL, WS_CHILD|TVS_HASBUTTONS|TVS_HASLINES|TVS_LINESATROOT);
+
+  if (!m_ctrlEdit.m_hWnd || !m_tabView.m_hWnd || !m_resourceView.m_hWnd || !m_statsView.m_hWnd)
     return -1;
 
   m_ctrlEdit.SetFont(AtlGetStockFont(DEFAULT_GUI_FONT)); 
@@ -111,11 +112,12 @@ LRESULT CHTTPTrace::OnCreate(LPCREATESTRUCT pcs)
   memset(&Format, 0, sizeof(Format));
   Format.cbSize = sizeof(Format);
   Format.dwMask = PFM_STARTINDENT;
-  Format.dxStartIndent = 100; // 100;
+  Format.dxStartIndent = 100; 
 
   m_ctrlEdit.SetParaFormat(Format);
   m_tabView.InsertPage(0, m_ctrlEdit.m_hWnd, "Headers view");
   m_tabView.InsertPage(1, m_resourceView, "Resource view");
+  m_tabView.InsertPage(2, m_statsView, "Statistics");
   m_tabView.SetActivePage(0);
 
   COrchestrator& orchestrator =
@@ -123,9 +125,9 @@ LRESULT CHTTPTrace::OnCreate(LPCREATESTRUCT pcs)
 
   orchestrator.AddProcessor(static_cast<ITransactionProcessor*>(&m_ctrlEdit));
   orchestrator.AddProcessor(static_cast<ITransactionProcessor*>(&m_resourceView));
-//  orchestrator.AddProcessor(static_cast<ITransactionProcessor*>(&m_saveProcessor));
+  orchestrator.AddProcessor(static_cast<ITransactionProcessor*>(&m_statsView));
 
-  return 0; // -1 if failed
+  return 0; 
 }
 
 LRESULT CHTTPTrace::OnRightButton(UINT ui, CPoint Pos)

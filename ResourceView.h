@@ -3,9 +3,6 @@
 #include <map>
 #include "ITransactionProcessor.h"
 
-//class CResourceView;
-//typedef CWindowImpl<CResourceView, CTreeViewCtrl> CResourceViewBase;
-
 class CResourceView : 
   public CWindowImpl<CResourceView, CTreeViewCtrl>,
   public ITransactionProcessor

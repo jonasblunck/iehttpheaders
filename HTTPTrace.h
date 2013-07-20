@@ -11,6 +11,7 @@
 #include <atlmisc.h>
 #include "CHTTPTraceRichEdit.h"
 #include "ResourceView.h"
+#include "StatisticsView.h"
 #include "SaveProcessor.h"
 
 #define EDSTYLE     ES_MULTILINE| WS_CHILD | WS_VISIBLE | /*WS_DISABLED | */ WS_VSCROLL
@@ -34,6 +35,7 @@ private:
   CHTTPTraceRichEdit   m_ctrlEdit;
   CResourceView m_resourceView;
   CTabView m_tabView;
+  CStatisticsView m_statsView;
   CRITICAL_SECTION m_cs;
   //CSaveProcessor m_saveProcessor;
 
